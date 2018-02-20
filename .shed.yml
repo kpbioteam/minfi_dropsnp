@@ -1,0 +1,7 @@
+categories: [Epigenetics]
+description: Function to drop the probes that contain either a SNP at the CpG interrogation
+  or at the single nucleotide extension
+homepage_url: https://github.com/kpbioteam/minfi_dropsnp
+name: minfi_dropsnp
+owner: kpbioteam
+remote_repository_url: https://github.com/kpbioteam/minfi_dropsnp

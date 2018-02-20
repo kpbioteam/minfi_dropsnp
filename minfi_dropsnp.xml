@@ -1,0 +1,28 @@
+<tool id="minfi_dropsnp" name="minfi_dropsnp" version="0.1.0">
+    <description>drop the probes that contain either a SNP at the CpG interrogation or at the single nucleotide extension</description>
+    <requirements>
+        <requirement type="package" version="1.24.0">bioconductor-minfi</requirement>
+        <requirement type="package" version="0.6.0">bioconductor-illuminahumanmethylation450kanno.ilmn12.hg19</requirement>
+    </requirements>
+    <command detect_errors="exit_code"><![CDATA[
+        Rscript  ${__tool_directory__}/minfi_dropsnp.R  "$input1" "$output1"
+    ]]></command>
+    <inputs>
+        <param type="data" name="input1" format="rdata" />
+    </inputs>
+    <outputs>
+        <data name="output1" format="rdata" from_work_dir="dropsnpGRSet.rdata" />
+    </outputs>
+    <tests>
+        <test>
+            <param name="input1" value="GRSet.rdata"/>
+            <output name="output1" file="dropsnpGRSet.rdata"/>
+        </test>
+    </tests>
+    <help><![CDATA[
+        Function to drop the probes that contain either a SNP at the CpG interrogation or at the single nucleotide extension (strongly recommend)
+    ]]></help>
+    <citations>
+        <citation type="doi">10.1093/bioinformatics/btu049</citation>
+    </citations>
+</tool>
