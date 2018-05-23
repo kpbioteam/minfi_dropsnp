@@ -8,10 +8,10 @@
         Rscript  ${__tool_directory__}/minfi_dropsnp.R  "$input1" "$output1"
     ]]></command>
     <inputs>
-        <param type="data" name="input1" format="rdata" />
+        <param type="data" name="input1" format="rdata" label="GenomicRatioSet" />
     </inputs>
     <outputs>
-        <data name="output1" format="rdata" from_work_dir="dropsnpGRSet.rdata" />
+        <data name="output1" format="rdata" from_work_dir="dropsnpGRSet.rdata" label= "GRSet without SNPs"/>
     </outputs>
     <tests>
         <test>
@@ -20,7 +20,7 @@
         </test>
     </tests>
     <help><![CDATA[
-        Function to drop the probes that contain either a SNP at the CpG interrogation or at the single nucleotide extension (strongly recommend)
+        Function to drop the probes that contain either a SNP at the CpG interrogation or at the single nucleotide extension (recommend)
     ]]></help>
     <citations>
         <citation type="doi">10.1093/bioinformatics/btu049</citation>
